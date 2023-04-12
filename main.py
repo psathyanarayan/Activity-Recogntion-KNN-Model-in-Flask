@@ -3,7 +3,7 @@ import numpy as np
 from flask import Flask, jsonify, request
 
 # Load the trained model from the pickle file
-with open('model3.pkl', 'rb') as f:
+with open('model32.pkl', 'rb') as f:
     model = pickle.load(f)
 X_train = np.load('X_train.npy',allow_pickle=True)
 y_train = np.load('y_train.npy',allow_pickle=True)
@@ -22,12 +22,17 @@ def predict():
 
     # Make a prediction using the trained model
     prediction = model.predict(input_array)[0]
-    prediction = int(prediction)
+    print(prediction)
     # Convert prediction to a float
-    val = y_train[prediction-1]
-    prediction = float(prediction)
+    # val = y_train[prediction-1]
+    # prediction = (prediction)
+    # print(prediction)
     # Return the prediction to the user in JSON format
-    return jsonify({'prediction': val})
+    return jsonify({'prediction': prediction})
+
+
+
+
 
 # Run the Flask app
 if __name__ == '__main__':
