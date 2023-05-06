@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 from flask import Flask, jsonify, request
 # Load the trained model from the pickle file
-with open('modelKNN.pkl', 'rb') as f:
+with open('data.pkl', 'rb') as f:
     model = pickle.load(f)
 #X_train = np.load('t/X_train.npy',allow_pickle=True)
 #y_train = np.load('t/y_train.npy',allow_pickle=True)
