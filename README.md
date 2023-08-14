@@ -7,7 +7,7 @@ From the table shown above it is clear that the Random Forest Algorithm has the 
 
 The flow diagram shows how the predict() function works in the Flask web framework to make predictions using a pre-trained model and return the output to the user in JSON format. The user provides input data to the Flask server. The Flask server receives the input data and calls the predict() function. The predict() function retrieves the input data from the user using the Flask request object. The input data is converted to a numpy array using the np.array() and reshape() methods. The pre-trained model makes a prediction using the input array using the model.predict() method. The prediction is returned to the Flask server as a single value. The predict() function returns the prediction to the Flask server in JSON format using the jsonify() function. The Flask server returns the JSON response to the user. This entire system is hosted in a cloud service provider. For the implementation of this project our system is deployed in Railway. Railway is a deployment platform where you can provision infrastructure, develop with that infrastructure locally, and then deploy to the cloud.
 
-[![Deploy on Railway](images/table.png)]
+[![Deploy on Railway](images/flask.png)]
 
 ---
 title: Flask
